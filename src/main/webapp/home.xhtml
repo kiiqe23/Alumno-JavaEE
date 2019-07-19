@@ -1,0 +1,144 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>FLOSS is the true, the path and the life !</title>
+	<link rel="stylesheet" href="css/theme.css.xhtml" type="text/css"></link>
+
+	<style type="text/css">
+.white-button.ui-button.ui-state-default {
+	background-color: #ffffff;
+	color: #222222;
+	border-color: #d6d6d6;
+	/* with the exported variables from Nova and Luna Themes*/
+	border-color: var(- -input-border-color, #d6d6d6);
+}
+
+.white-button.ui-button.ui-state-default:enabled:hover, .white-button.ui-button.ui-state-default:focus
+	{
+	background-color: #f2f2f2;
+	border-color: #ccc;
+	color: #373a3c;
+	/* with the exported variables from Nova and Luna Themes*/
+	border-color: var(- -input-hover-border-color, #ccc);
+}
+
+.green-button.ui-button.ui-state-default {
+	background-color: #5cb85c;
+	border-color: #5cb85c;
+	color: #fff;
+}
+
+.green-button.ui-button.ui-state-default:enabled:hover, .green-button.ui-button.ui-state-default:focus
+	{
+	background-color: #4cae4c;
+	border-color: #5cb85c;
+}
+
+.red-button.ui-button.ui-state-default {
+	background-color: #d9534f;
+	border-color: #d9534f;
+	color: #fff;
+}
+
+.red-button.ui-button.ui-state-default:enabled:hover, .red-button.ui-button.ui-state-default:focus
+	{
+	background-color: #d43f3a;
+	border-color: #d9534f;
+}
+</style>
+
+
+</h:head>
+
+
+<h:body>
+	<h1>Becoming Java EE Expert from Scratch</h1>
+	<br />
+
+        #{home.hola}
+        <br />
+
+        #{info.ms}
+        <br />
+	<br />
+
+	<h3 style="margin-top: 0">Add information!~</h3>
+
+
+
+	<!--  <h:form>
+		<p:growl id="growl" life="2000" />
+
+		<div class="ui-g ui-fluid">
+
+			<div class="ui-g-12 ui-md-4">
+				<div class="ui-inputgroup">
+					<span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+					<p:inputText value="#{home.tmp.ftvFamiliaFamilia}"
+						placeholder="ftv_familia_familia" />
+				</div>
+			</div>
+
+			<div class="ui-g-12 ui-md-4">
+				<div class="ui-inputgroup">
+					<span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+					<p:inputText value="#{home.tmp.ftvFamiliaDescripcion}"
+						placeholder="ftv_familia_descripcion" />
+				</div>
+			</div>
+
+			<div class="ui-g-12 ui-md-4">
+				<div class="ui-inputgroup">
+					<span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+					<p:inputText value="#{home.tmp.ftvFamiliaMovUsuario}"
+						placeholder="ftv_familia_mov_usuario" />
+				</div>
+			</div>
+
+			<div class="ui-g-12 ui-md-4">
+				<div class="ui-inputgroup">
+					<span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+					<p:calendar id="button" value="#{home.tmp.ftvFamiliaMovFecha}"
+						showOn="button" />
+				</div>
+			</div>
+
+			<div class="ui-g-12 ui-md-4">
+				<div class="ui-inputgroup">
+					<span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+					<p:inputText value="#{home.tmp.ftvFamiliaMovIp }"
+						placeholder="ftv_familia_mov_ip" />
+				</div>
+			</div>
+
+			<p:commandButton value="Submit" id="nonAjax" action="#{home.save()}"
+				style="margin-right:20px;" ajax="true" />
+		</div>
+	</h:form>  -->
+
+	<p:dataTable var="alumno" value="#{db.findAll()}">
+
+		<p:column headerText="codigo_alumno">
+			<h:outputText value="#{alumno.codigoAlumno}" />
+		</p:column>
+
+		<p:column headerText="nombre_alumno">
+			<h:outputText value="#{alumno.nombreAlumno}" />
+		</p:column>
+
+		<p:column headerText="carrera_alumno">
+			<h:outputText value="#{alumno.carreraAlumno}" />
+		</p:column>
+
+		<p:column headerText="calendario_alumno">
+			<h:outputText value="#{alumno.calendarioAlumno}" />
+		</p:column>
+
+	</p:dataTable>
+
+</h:body>
+
+</html>
