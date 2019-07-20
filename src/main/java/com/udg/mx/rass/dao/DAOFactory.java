@@ -1,4 +1,6 @@
 package com.udg.mx.rass.dao;
+import com.udg.mx.rass.model.Alumno;
+
 
 
 import java.sql.SQLException; //excepciones

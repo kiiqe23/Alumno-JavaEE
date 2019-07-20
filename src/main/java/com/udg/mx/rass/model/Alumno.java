@@ -1,7 +1,13 @@
 package com.udg.mx.rass.model;
 
-public class Alumno {
+import java.io.Serializable;
+
+public class Alumno implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Long codigoAlumno;
     private String nombreAlumno;
     private String carreraAlumno;

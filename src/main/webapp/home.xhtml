@@ -1,10 +1,12 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>FLOSS is the true, the path and the life !</title>
+	<title>Porfin!</title>
 	<link rel="stylesheet" href="css/theme.css.xhtml" type="text/css"></link>
 
 	<style type="text/css">
@@ -55,22 +57,20 @@
 
 
 <h:body>
-	<h1>Becoming Java EE Expert from Scratch</h1>
+	<h1>Bienvenido</h1>
 	<br />
 
-        #{home.hola}
         <br />
 
-        #{info.ms}
         <br />
 	<br />
 
-	<h3 style="margin-top: 0">Add information!~</h3>
+	<h3 style="margin-top: 0">Añade informacion</h3>
 
 
-
-	<!--  <h:form>
-		<p:growl id="growl" life="2000" />
+<!--  
+	  <h:form>
+		  <p:growl id="growl" life="2000" /> 
 
 		<div class="ui-g ui-fluid">
 
@@ -117,24 +117,42 @@
 			<p:commandButton value="Submit" id="nonAjax" action="#{home.save()}"
 				style="margin-right:20px;" ajax="true" />
 		</div>
-	</h:form>  -->
+	</h:form>
+	
+	-->
+	
+	<p:form>
+			<p:panelGrid columns="3">
+				<p:outputText value="ID: " />
+				<p:inputText value="#{libroMB.libro.id}" />
+				<p:outputText value="Título: " />
+				<p:inputText value="#{libroMB.libro.titulo}" />
+				<p:outputText value="ISBN: " />
+				<p:inputText value="#{libroMB.libro.IBSN}" />
+				<p:outputText value="ISBN: " />
+				<p:inputText value="#{libroMB.libro.IBSN}" />
+			</p:panelGrid>
+			<p:commandButton action="#{libroMB.salvar()}" value="Salvar" />
+		</p:form>
+		
+		
 
-	<p:dataTable var="alumno" value="#{db.findAll()}">
+	<p:dataTable var="a" value="#{db.findAll()}">
 
 		<p:column headerText="codigo_alumno">
-			<h:outputText value="#{alumno.codigoAlumno}" />
+			<h:outputText value="#{a.codigoAlumno}" />
 		</p:column>
 
 		<p:column headerText="nombre_alumno">
-			<h:outputText value="#{alumno.nombreAlumno}" />
+			<h:outputText value="#{a.nombreAlumno}" />
 		</p:column>
 
 		<p:column headerText="carrera_alumno">
-			<h:outputText value="#{alumno.carreraAlumno}" />
+			<h:outputText value="#{a.carreraAlumno}" />
 		</p:column>
 
 		<p:column headerText="calendario_alumno">
-			<h:outputText value="#{alumno.calendarioAlumno}" />
+			<h:outputText value="#{a.calendarioAlumno}" />
 		</p:column>
 
 	</p:dataTable>

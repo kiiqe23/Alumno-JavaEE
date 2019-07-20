@@ -21,7 +21,7 @@ public interface AlumnoDAO {
 
     Alumno buscar(Object id);
 
-    List<Alumno> buscartodo();
+    List<Alumno> findAll();
 
     Alumno buscarPorNombreAlumno(String nombreAlumno);
 }

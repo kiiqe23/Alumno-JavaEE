@@ -6,7 +6,7 @@
 	<persistence-unit
 		name="com.mycompany_test2deleteme_war_1.0-SNAPSHOTPU"
 		transaction-type="JTA">
-		<jta-data-source>java:/jboss/datasources/AlumnoDS</jta-data-source>
+		<jta-data-source>java:jboss/datasources/AlumnoDS</jta-data-source>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
 			<property
