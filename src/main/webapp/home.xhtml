@@ -60,15 +60,15 @@
 	<h1>Bienvenido</h1>
 	<br />
 
-        <br />
+	<br />
 
-        <br />
+	<br />
 	<br />
 
 	<h3 style="margin-top: 0">Añade informacion</h3>
 
 
-<!--  
+	<!--  
 	  <h:form>
 		  <p:growl id="growl" life="2000" /> 
 
@@ -120,24 +120,24 @@
 	</h:form>
 	
 	-->
-	
-	<p:form>
-			<p:panelGrid columns="3">
-				<p:outputText value="ID: " />
-				<p:inputText value="#{libroMB.libro.id}" />
-				<p:outputText value="Título: " />
-				<p:inputText value="#{libroMB.libro.titulo}" />
-				<p:outputText value="ISBN: " />
-				<p:inputText value="#{libroMB.libro.IBSN}" />
-				<p:outputText value="ISBN: " />
-				<p:inputText value="#{libroMB.libro.IBSN}" />
-			</p:panelGrid>
-			<p:commandButton action="#{libroMB.salvar()}" value="Salvar" />
-		</p:form>
-		
-		
 
-	<p:dataTable var="a" value="#{db.findAll()}">
+	<h:form>
+			<h:panelGrid columns="1">
+				<h:outputText value="Codigo: " />
+				<h:inputText value="#{alumnoEjb.alumno.codigoAlumno}"/>
+				<h:outputText value="Nombre: " />
+				<h:inputText value="#{alumnoEjb.alumno.nombreAlumno}"/>
+				<h:outputText value="Carrera: " />
+				<h:inputText value="#{alumnoEjb.alumno.carreraAlumno}"/>
+				<h:outputText value="Calendario: " />
+				<h:inputText value="#{alumnoEjb.alumno.calendarioAlumno}"/>
+			</h:panelGrid>
+			<h:commandButton action="#{alumnoEjb.guardar()}" value ="Guardar"/>
+	</h:form>
+
+
+
+	<p:dataTable var="a" value="#{alumnoEjb.alumnos}">
 
 		<p:column headerText="codigo_alumno">
 			<h:outputText value="#{a.codigoAlumno}" />

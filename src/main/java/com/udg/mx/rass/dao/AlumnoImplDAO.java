@@ -11,18 +11,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.ejb.Stateless;
 import javax.faces.bean.ManagedBean;
 
 
 	//La subclase AlumnoImplDAO Hereda todas las variables y métodos definidos por la 
 	//superclase DAOFactory y agrega sus propios elementos únicos, tambien implementa la interface
 	//AlumnoDAO
-@ManagedBean(name="db")
+@Stateless
 public class AlumnoImplDAO extends DAOFactory<Alumno> implements AlumnoDAO {
 
 	//Consultas de SQL y metodos
 	    private static final String SQL_INSERT 
-	    		= "";//"INSERT INTO alumno (codigoalumno, nombrealumno, carreraalumno, calendarioalumno) VALUES(?, ?, ?, ?)";
+	    		= "INSERT INTO alumno (codigoalumno, nombrealumno, carreraalumno, calendarioalumno) VALUES(?, ?, ?, ?)";
 	    private static final String SQL_UPDATE
 	            = "";
 	    private static final String SQL_DELETE
