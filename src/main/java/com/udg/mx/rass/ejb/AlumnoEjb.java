@@ -6,16 +6,18 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
 import javax.annotation.PostConstruct;
-import com.udg.mx.rass.dao.AlumnoImplDAO;
+import com.udg.mx.rass.dao.AlumnoDAO;
 import com.udg.mx.rass.model.Alumno;
 
 
 
 
-@ManagedBean
+
 @LocalBean
+@Named
 @ViewScoped
 public class AlumnoEjb implements Serializable {
 
@@ -26,7 +28,7 @@ public class AlumnoEjb implements Serializable {
 	
 	
 	@EJB
-	private AlumnoImplDAO dao;
+	private AlumnoDAO dao;
 	private Alumno estudiante;
 	
 	public List<Alumno> getAlumnos() {
@@ -40,7 +42,7 @@ public class AlumnoEjb implements Serializable {
 	}
 	
 	public void guardar() {
-		dao.insertar(estudiante);	
+		dao.insertar(estudiante);
 	}
 
 	public Alumno getAlumno() {

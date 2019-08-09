@@ -2,6 +2,8 @@ package com.udg.mx.rass.dao;
 
 import java.util.List;
 
+import javax.ejb.Local;
+import javax.ejb.Stateless;
 import com.udg.mx.rass.model.Alumno;
 
 
@@ -9,6 +11,8 @@ import com.udg.mx.rass.model.Alumno;
 //por cualquier número de clases, permitiendo a cada clase compartir el 
 //interfaz de programación sin tener que ser consciente
 //de la implementación que hagan las otras clases que implementen el interface.
+@Local
+@Stateless
 public interface AlumnoDAO {
 
 // create (clase identificador)

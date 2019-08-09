@@ -2,6 +2,7 @@ package com.udg.mx.rass.model;
 
 import java.io.Serializable;
 
+
 import javax.faces.bean.ManagedBean;
 
 
